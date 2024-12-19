@@ -3,7 +3,6 @@ import { UserContext } from './context';
 const Login = () => {
   const { setUser } = useContext(UserContext);
   const [userLogin,setUserLogin]=useState({});
-  const [currentUser,setCurrentUser]=useState({})
   const [error, setError] = useState('');
 
   const handleLogin = async (e) => {
@@ -23,7 +22,6 @@ const Login = () => {
         //     },
         //     body: JSON.stringify(user) // המרת האובייקט ל-JSON
         // });
-          setCurrentUser(foundUser);
           setError('');
         } else {
           setError('סיסמה לא נכונה');
